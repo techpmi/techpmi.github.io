@@ -11,6 +11,10 @@ function App() {
   return (
     <Router>
       <div>
+
+        {/* Временная панель навигации для проверки работы роутера.
+            Когда будем делать настоящие страницы, можно удалить. */}
+
         <nav>
           <ul>
             <li>
@@ -25,8 +29,8 @@ function App() {
           </ul>
         </nav>
 
-        {/* A <Routes> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        {/* <Switch> пробегает по дочерним элементам <Route> и рендерит
+            первый с path совпадающим с текущим url. */}
         <Switch>
           <Route path="/login">
             <h1>Login</h1>
