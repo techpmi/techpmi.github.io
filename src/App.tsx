@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+import Page from './Components/Page';
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
             первый с path совпадающим с текущим url. */}
         <Switch>
           <Route path="/login">
-            <h1>Login</h1>
+            <Page type="form" caption="form"><div></div></Page>
           </Route>
           <Route path="/students">
             <h1>Students</h1>
