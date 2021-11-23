@@ -16,7 +16,8 @@
 }
 
 .Form-Card {
-    min-height: 840px;
+    max-height: 840px;
+    height: 80%;
     width: 100%;
     max-width: 750px;
     background: rgba(255, 254, 251, 0.9);
