@@ -11,7 +11,7 @@ import Page from './Components/Page';
 function App() {
   return (
     <Router>
-      <div>
+      <>
 
         {/* Временная панель навигации для проверки работы роутера.
             Когда будем делать настоящие страницы, можно удалить. */}
@@ -43,7 +43,7 @@ function App() {
             <h1>Home</h1>
           </Route>
         </Switch>
-      </div>
+      </>
     </Router>
   );
 }

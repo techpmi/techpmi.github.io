@@ -1,5 +1,5 @@
 import { Component, ReactElement } from 'react';
-import image from '../../resources/Geometry.png';
+import { Card, Container } from 'react-bootstrap';
 import './FormPage.css';
 
 interface FormPageProps {
@@ -9,7 +9,19 @@ interface FormPageProps {
  
 class FormPage extends Component<FormPageProps> {
     render() { 
-        return (<img className='Form-background-image' src={image}/>);
+        return (
+            <>
+                <div className="Form-background-image"></div>
+                <Container className="Form-page">
+                    <Card className="Form-Card">
+                        <Card.Body>
+                            <Card.Title>{this.props.caption}</Card.Title>
+                            {this.props.children}
+                        </Card.Body>
+                    </Card>
+                </Container>
+            </>
+        );
     }
 }
  
