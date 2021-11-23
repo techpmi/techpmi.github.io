@@ -1,15 +1,31 @@
-import { Component } from 'react';
-import { JsxElement } from 'typescript';
+import { Component, ReactElement } from 'react';
+import { Card, Container } from 'react-bootstrap';
+import './CardPage.css';
 
-interface FormPageProps {
+interface CardPageProps {
     caption: string;
-    children: JsxElement | Component;
+    children: ReactElement;
 }
  
-class FormPage extends Component<FormPageProps> {
+class CardPage extends Component<CardPageProps> {
     render() { 
-        return (<div></div>);
+        return (
+            <>
+                <div className="Card-background-decor Card-background-decor-top"></div>
+                <hr className="Separator-tilted"></hr>
+                <div className="Card-header">
+                    {this.props.caption}
+                </div>
+                <div className="Card-page">
+                    <Card className="Card-Content">
+                        <Card.Body>
+                            {this.props.children}
+                        </Card.Body>
+                    </Card>
+                </div>
+            </>
+        );
     }
 }
  
-export default FormPage;
+export default CardPage;

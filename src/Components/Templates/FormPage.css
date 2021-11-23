@@ -19,5 +19,7 @@
     min-height: 840px;
     width: 100%;
     max-width: 750px;
-    opacity: .9;
+    background: rgba(255, 254, 251, 0.9);
+    border-radius: 10px;
+    border: none;
 }

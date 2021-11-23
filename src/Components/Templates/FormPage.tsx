@@ -15,7 +15,6 @@ class FormPage extends Component<FormPageProps> {
                 <Container className="Form-page">
                     <Card className="Form-Card">
                         <Card.Body>
-                            <Card.Title>{this.props.caption}</Card.Title>
                             {this.props.children}
                         </Card.Body>
                     </Card>

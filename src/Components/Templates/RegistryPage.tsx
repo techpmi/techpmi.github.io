@@ -1,15 +1,32 @@
-import { Component } from 'react';
-import { JsxElement } from 'typescript';
+import { Component, ReactElement } from 'react';
+import { Card, Container } from 'react-bootstrap';
+import './RegistryPage.css';
 
-interface FormPageProps {
+interface RegistryPageProps {
     caption: string;
-    children: JsxElement | Component;
+    children: ReactElement;
 }
  
-class FormPage extends Component<FormPageProps> {
+class RegistryPage extends Component<RegistryPageProps> {
     render() { 
-        return (<div></div>);
+        return (
+            <>
+                <div className="Registry-background-decor Registry-background-decor-top"></div>
+                <div className="Registry-background-decor Registry-background-decor-bottom"></div>
+                <hr className="Separator-tilted"></hr>
+                <div className="Registry-header">
+                    {this.props.caption}
+                </div>
+                <div className="Registry-page">
+                    <Card className="Registry-Content">
+                        <Card.Body>
+                            {this.props.children}
+                        </Card.Body>
+                    </Card>
+                </div>
+            </>
+        );
     }
 }
  
-export default FormPage;
+export default RegistryPage;
