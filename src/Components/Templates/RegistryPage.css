@@ -1,0 +1,64 @@
+.Registry-page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 270px;
+    padding-left: 270px;
+    width: 100%;
+    height: 100%;
+}
+
+.Registry-background-decor {
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.Registry-background-decor-top {
+    top: 0;
+    right: 0;
+    background-position: top right;
+    background-image: url(../../resources/decortop.png);
+}
+
+.Registry-background-decor-bottom {
+    bottom: 0;
+    left: 0;
+    background-position: bottom left;
+    background-image: url(../../resources/decorbottom.png);
+}
+
+.Registry-header {
+    background-color: #fffc;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    padding: 25px 63px;
+    top: 58px;
+    left: 11px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 94px;
+}
+
+.Registry-Content {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 270px;
+}
+
+.Separator-tilted {
+    opacity: 1;
+    margin: 0;
+    transform: rotate(0.41deg);
+    position: absolute;
+    width: 100%;
+    top: 270px;
+}
