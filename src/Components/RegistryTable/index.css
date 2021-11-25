@@ -1,0 +1,49 @@
+.Registry-Table {
+    font-size: 24px;
+    font-weight: 300;
+    border-style: none;
+}
+
+.table>thead {
+    height: 100px;
+    vertical-align: middle;
+}
+
+tr {
+    height: 70px;
+}
+
+tr:nth-child(odd):not(thead>tr) {
+    background-color: rgba(169, 206, 196, .5);
+}
+
+.table>:not(caption)>*>* {
+    padding: 0.5rem 1rem;
+}
+
+.table>:not(caption)>*>th {
+    padding-right: 50px;
+}
+
+th {
+    position: relative;
+    font-weight: 500;
+}
+
+th::before {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: calc(50% - 10px);
+    content: "";
+    background-image: url(../../resources/sorting.png);
+}
+
+td {
+    vertical-align: middle;
+}
+
+td:nth-child(2) {
+    font-weight: 400;
+}
