@@ -16,15 +16,15 @@ const MIN_ROWS_AMOUNT = 3;
 
 class RegistryTable extends Component<RegistryTableProps> {
     render() {
-        const columnHeaders: ReactNode[] = this.props.columns.map((column: Column) => {
-            return <th>{column.caption}</th>;
+        const columnHeaders: ReactNode[] = this.props.columns.map((column: Column, index: number) => {
+            return <th key={index}>{column.caption}</th>;
         });
 
-        const tableData: ReactNode[] = this.props.data.map((row: Record<string, string>) => {
+        const tableData: ReactNode[] = this.props.data.map((row: Record<string, string>, index: number) => {
             return (
-                <tr>
-                    {this.props.columns.map((column: Column) => {
-                        return <td>{row[column.field]}</td>;
+                <tr key={index}>
+                    {this.props.columns.map((column: Column, index: number) => {
+                        return <td key={index}>{row[column.field]}</td>;
                     })}
                 </tr>
             );
@@ -33,9 +33,9 @@ class RegistryTable extends Component<RegistryTableProps> {
         if (this.props.data.length < MIN_ROWS_AMOUNT) {
             for (let i = this.props.data.length; i <= MIN_ROWS_AMOUNT; i++) {
                 tableData.push(
-                    <tr>
-                        {this.props.columns.map(() => {
-                            return <td></td>;
+                    <tr key={i}>
+                        {this.props.columns.map((column: Column, index: number) => {
+                            return <td key={index}></td>;
                         })}
                     </tr>
                 );
