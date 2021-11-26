@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    height: 100%;
+    width: 100%;
+    background: url(/src/resources/mainpageback2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 175px;
+}
+.title-container{
+    width: 62%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0 10px 10px 0;
+    align-items: center;
+    padding: 25px 63px 24px 41px;
+
+}
+.title{
+    text-align: center;
+    font-size: 5vw;
+}
+.auth-button{
+    position: absolute;
+    top: 75px;
+    right: 95px;
+    width: 3.5%;
+}
+.auth-button > img{
+    width: 100%;
+}
+.bottom-buttons{
+    display: flex;
+    flex-direction: row;
+    width: 66%;
+    justify-content: space-between;
+    margin-left: 17%;
+    margin-top: 12vw;
+
+}
+.stud-button{
+    width: 27%;
+    display: flex;
+    justify-content: center;
+}
+.kaph-button{
+    width: 27%;
+    display: flex;
+    justify-content: center;
+}
+.stud-button > img{
+    width: 100%;
+}
+.kaph-button > img{
+    width: 100%;
+}
