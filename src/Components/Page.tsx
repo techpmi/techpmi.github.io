@@ -14,7 +14,7 @@ class Page extends Component<PageProps> {
         document.title = this.props.caption;
     }
 
-    getSnapshotBeforeUpdate() {
+    componentDidUpdate() {
         document.title = this.props.caption;
     }
       
