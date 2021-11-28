@@ -14,9 +14,7 @@ class FormPage extends Component<FormPageProps> {
                 <div className="Form-background-image"></div>
                 <Container className="Form-page">
                     <Card className="Form-Card">
-                        <Card.Body>
-                            {this.props.children}
-                        </Card.Body>
+                        {this.props.children}
                     </Card>
                 </Container>
             </>

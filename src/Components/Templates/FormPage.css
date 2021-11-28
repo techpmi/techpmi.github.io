@@ -5,6 +5,8 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    font-family: Roboto;
+    font-style: normal;
 }
 
 .Form-background-image {
@@ -23,4 +25,50 @@
     background: rgba(255, 254, 251, 0.9);
     border-radius: 10px;
     border: none;
+}
+
+.Form-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    padding: 0;
+}
+
+.Form-header-wrapper {
+    flex-grow: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.Form-header {
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    font-size: 40px;
+}
+
+.Form-header-link {
+    transition: ease-in-out 100ms;
+    color: #0008;
+    text-decoration: none;
+}
+
+.link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    color: #000000;
+}
+
+.link:hover,
+.Form-header-link:hover {
+    color: #000a;
+}
+
+.link:active,
+.Form-header-link:active {
+    color: #000f;
 }

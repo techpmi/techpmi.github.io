@@ -1,12 +1,15 @@
+import { MouseEventHandler } from 'react';
 import { Button as BaseButton} from 'react-bootstrap';
+import './Button.css';
 
 type TButtonProps = {
-    onClick: Function;
+    onClick: MouseEventHandler<Element>;
+    caption: string;
+    className?: string;
 }
 
-export default ({onClick}: TButtonProps) => {
+export default ({onClick, caption, className}: TButtonProps) => {
     return (
-
-        
+        <BaseButton className={className} bsPrefix="Button" onClick={onClick}>{caption}</BaseButton>
     );
 }
