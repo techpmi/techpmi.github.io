@@ -14,3 +14,13 @@ nav {
   top: 270px;
   z-index: 999;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-grow-0 {
+  flex-grow: 0;
+}

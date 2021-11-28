@@ -1,0 +1,19 @@
+.Button {
+    background: none;
+    border: 3px solid #0008;
+    border-radius: 10px;
+    width: 350px;
+    height: 65px;
+    font-size: 28px;
+    font-family: Roboto;
+    font-weight: 400;
+    transition: ease-in-out 100ms;
+}
+
+.Button:hover {
+    background: #fffc;
+}
+
+.Button:active {
+    background: #ffff;
+}
