@@ -1,14 +1,13 @@
 table {
 	width: 1085px;
 }
-.CardTable-row:nth-child(odd){
+.CardTable-row {
 	height: 70px;
-	left: 85px;
+}
+.CardTable-row:nth-child(odd){
 	background: #EFECE8;
 }
 .CardTable-row:nth-child(even){
-	height: 70px;
-	left: 85px;
 	background: #FFFFFF;
 }
 .Row-Field,
