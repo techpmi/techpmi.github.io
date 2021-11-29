@@ -1,19 +1,38 @@
 table{
-	border: 1px solid #eee;
-    margin-left: auto;
-    margin-right: auto;
-	table-layout: fixed;
-	width: 40%;
-	margin-bottom: 20px;
+	width: 1085px;
+	top: 483px;
 }
-td{
-	padding: 5px 10px;
-	border: 1px solid rgb(68, 148, 52);
-	text-align: left;
+.CardTable-row:nth-child(odd){
+	height: 70px;
+	left: 85px;
+	background: #EFECE8;
 }
-tr:nth-child(odd){
-	background: #1f2eb3;
+.CardTable-row:nth-child(even){
+	height: 70px;
+	left: 85px;
+	background: #FFFFFF;
 }
-tr:nth-child(even){
-	background: #b31f1f;
+.Row-Field{
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 28px;
+	padding-left: 20px;
+	width: auto;
+
+	color: #000000;
 }
+.Row-Value{
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 30px;
+	padding-left: 25px;
+
+	color: #000000;
+}
+

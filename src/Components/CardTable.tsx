@@ -12,18 +12,21 @@ interface CardTableProps {
 
 class CardTable extends Component<CardTableProps> {
     render() { 
-        return this.props.data.map((elem, index) => {
-            return <table key = {index}>
-                    <tr>
-                        <td>
+        return (<table>{
+            this.props.data.map((elem, index) => {
+                return <tr className="CardTable-row" key = {index}>     
+                    <td>
+                        <div className="Row-Field">
                             {elem.field}
-                        </td>
-                        <td>
+                        </div>
+                        <div className="Row-Value">
                             {elem.value}
-                        </td>
-                    </tr>
-            </table>
-        });
+                        </div>
+                    </td>
+                </tr>
+            })
+        }
+        </table>);
     }
 }
  
