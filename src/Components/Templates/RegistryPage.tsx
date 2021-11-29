@@ -6,9 +6,9 @@ interface RegistryPageProps {
     caption: string;
     children: ReactElement;
 }
- 
+
 class RegistryPage extends Component<RegistryPageProps> {
-    render() { 
+    render() {
         return (
             <>
                 <div className="Registry-background-decor Registry-background-decor-top"></div>
@@ -20,6 +20,9 @@ class RegistryPage extends Component<RegistryPageProps> {
                 <div className="Registry-page">
                     <Card className="Registry-Content">
                         <Card.Body>
+                            <div className="Registry-input-wrapper">
+                                <input className="Registry-input" placeholder="Поиск" />
+                            </div>
                             {this.props.children}
                         </Card.Body>
                     </Card>
@@ -28,5 +31,5 @@ class RegistryPage extends Component<RegistryPageProps> {
         );
     }
 }
- 
+
 export default RegistryPage;
