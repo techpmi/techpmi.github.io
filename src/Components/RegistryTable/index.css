@@ -26,16 +26,15 @@ tr:nth-child(odd):not(thead>tr) {
 }
 
 th {
-    position: relative;
     font-weight: 500;
+    white-space: pre;
 }
 
-th::before {
-    position: absolute;
+th::after {
+    display: inline-block;
+    margin-left: 20px;
     width: 20px;
     height: 20px;
-    right: 10px;
-    top: calc(50% - 10px);
     content: "";
     background-image: url(../../resources/sorting.png);
 }
