@@ -1,6 +1,5 @@
-table{
+table {
 	width: 1085px;
-	top: 483px;
 }
 .CardTable-row:nth-child(odd){
 	height: 70px;
@@ -12,22 +11,22 @@ table{
 	left: 85px;
 	background: #FFFFFF;
 }
-.Row-Field{
+.Row-Field,
+.Row-Value {
 	display: inline-block;
 	font-family: Roboto;
 	font-style: normal;
+}
+.Row-Field {
 	font-weight: 300;
 	font-size: 24px;
 	line-height: 28px;
 	padding-left: 20px;
-	width: auto;
 
 	color: #000000;
 }
-.Row-Value{
+.Row-Value {
 	display: inline-block;
-	font-family: Roboto;
-	font-style: normal;
 	font-weight: bold;
 	font-size: 26px;
 	line-height: 30px;

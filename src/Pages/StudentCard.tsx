@@ -23,7 +23,7 @@ const data = [{
 class StudentCard extends Component {
     render() { 
         return (
-            <Page type="card" caption="Карточка студента"><CardTable  data = {data}></CardTable></Page>
+            <Page type="card" caption="Карточка студента"><CardTable data={data}></CardTable></Page>
         );
     }
 }
