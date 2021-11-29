@@ -1,0 +1,36 @@
+table {
+	width: 1085px;
+}
+.CardTable-row {
+	height: 70px;
+}
+.CardTable-row:nth-child(odd){
+	background: #EFECE8;
+}
+.CardTable-row:nth-child(even){
+	background: #FFFFFF;
+}
+.Row-Field,
+.Row-Value {
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+}
+.Row-Field {
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 28px;
+	padding-left: 20px;
+
+	color: #000000;
+}
+.Row-Value {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 30px;
+	padding-left: 25px;
+
+	color: #000000;
+}
+
