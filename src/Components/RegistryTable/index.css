@@ -4,9 +4,17 @@
     border-style: none;
 }
 
+.Registry-scroll {
+    overflow-y: scroll;
+    max-height: 450px;
+}
+
 .table>thead {
     height: 100px;
+    background-color: white;
     vertical-align: middle;
+    position: sticky;
+    top: 0;
 }
 
 tr {

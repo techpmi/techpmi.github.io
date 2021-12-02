@@ -98,16 +98,18 @@ class RegistryTable extends Component<RegistryTableProps, RegistryTableState> {
         }
 
         return (
-            <Table className="Registry-Table" striped borderless>
-                <thead>
-                    <tr>
-                        {columnHeaders}
-                    </tr>
-                </thead>
-                <tbody>
-                    {tableData}
-                </tbody>
-            </Table>
+            <div className="Registry-scroll">
+                <Table className="Registry-Table" striped borderless>
+                    <thead>
+                        <tr>
+                            {columnHeaders}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {tableData}
+                    </tbody>
+                </Table>
+            </div>
         );
     }
 }
