@@ -39,6 +39,14 @@ th::after {
     background-image: url(../../resources/sorting.png);
 }
 
+th.ascending::after {
+    background-image: url(../../resources/sorting_asc.png);
+}
+
+th.descending::after {
+    background-image: url(../../resources/sorting_desc.png);
+}
+
 td {
     vertical-align: middle;
 }
