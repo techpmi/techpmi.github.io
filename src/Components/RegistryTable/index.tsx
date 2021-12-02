@@ -12,29 +12,84 @@ interface RegistryTableProps {
     data: Record<string, string>[];
 }
 
+interface RegistryTableState {
+    sortedField: string;
+    isSortAscending: boolean;
+}
+
 const MIN_ROWS_AMOUNT = 3;
 
-class RegistryTable extends Component<RegistryTableProps> {
+class RegistryTable extends Component<RegistryTableProps, RegistryTableState> {
+    constructor(props: RegistryTableProps) {
+        super(props);
+        this.state = {
+            sortedField: '',
+            isSortAscending: true,
+        };
+    }
+
+    setSortedField(field: string): void {
+        let { isSortAscending } = this.state;
+        if (this.state.sortedField === field) {
+            isSortAscending = !isSortAscending;
+        }
+
+        this.setState({
+            sortedField: field,
+            isSortAscending,
+        });
+    }
+
+    setClassNameForTableHeader(field: string): string | undefined {
+        return this.state.sortedField === field
+            ? (this.state.isSortAscending ? 'ascending' : 'descending')
+            : undefined;
+    }
+
     render() {
-        const columnHeaders: ReactNode[] = this.props.columns.map((column: Column, index: number) => {
-            return <th key={index}>{column.caption}</th>;
+        const sortedData = [...this.props.data];
+        const { columns } = this.props;
+        const { sortedField, isSortAscending } = this.state;
+
+        if (sortedField !== '') {
+            sortedData.sort((a, b) => {
+                if (a[sortedField] < b[sortedField]) {
+                    return isSortAscending ? -1 : 1;
+                }
+                if (a[sortedField] > b[sortedField]) {
+                    return isSortAscending ? 1 : -1;
+                }
+                return 0;
+            });
+        }
+
+        const columnHeaders: ReactNode[] = columns.map((column: Column, index: number) => {
+            return (
+                <th
+                    key={index}
+                    onClick={() => this.setSortedField(column.field)}
+                    className={this.setClassNameForTableHeader(column.field)}
+                >
+                    {column.caption}
+                </th>
+            );
         });
 
-        const tableData: ReactNode[] = this.props.data.map((row: Record<string, string>, index: number) => {
+        const tableData: ReactNode[] = sortedData.map((row: Record<string, string>, index: number) => {
             return (
                 <tr key={index}>
-                    {this.props.columns.map((column: Column, index: number) => {
+                    {columns.map((column: Column, index: number) => {
                         return <td key={index}>{row[column.field]}</td>;
                     })}
                 </tr>
             );
         });
 
-        if (this.props.data.length < MIN_ROWS_AMOUNT) {
-            for (let i = this.props.data.length; i <= MIN_ROWS_AMOUNT; i++) {
+        if (sortedData.length < MIN_ROWS_AMOUNT) {
+            for (let i = sortedData.length; i <= MIN_ROWS_AMOUNT; i++) {
                 tableData.push(
                     <tr key={i}>
-                        {this.props.columns.map((column: Column, index: number) => {
+                        {columns.map((column: Column, index: number) => {
                             return <td key={index}></td>;
                         })}
                     </tr>
