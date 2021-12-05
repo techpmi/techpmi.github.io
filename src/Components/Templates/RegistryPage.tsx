@@ -20,9 +20,6 @@ class RegistryPage extends Component<RegistryPageProps> {
                 <div className="Registry-page">
                     <Card className="Registry-Content">
                         <Card.Body>
-                            <div className="Registry-input-wrapper">
-                                <input className="Registry-input" placeholder="Поиск" />
-                            </div>
                             {this.props.children}
                         </Card.Body>
                     </Card>
