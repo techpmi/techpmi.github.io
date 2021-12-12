@@ -1,14 +1,10 @@
 import { Component, ReactElement } from 'react';
+import { TData } from '../DataUtil';
 import './CardTable.css';
 
-type Tdata = {
-    [key:string]:string
-}
-
 interface CardTableProps {
-    data : Tdata[]
+    data : TData[]
 }
-
 
 class CardTable extends Component<CardTableProps> {
     render() { 

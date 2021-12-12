@@ -21,6 +21,11 @@ tr {
     height: 70px;
 }
 
+tr>a {
+    height: 70px;
+
+}
+
 tr:nth-child(odd):not(thead>tr) {
     background-color: rgba(169, 206, 196, .5);
 }
@@ -56,9 +61,11 @@ th.descending::after {
 }
 
 td {
+    padding: 0.5rem 1rem;
     vertical-align: middle;
+    color: black;
 }
 
 td:nth-child(2) {
-    font-weight: 400;
+    font-weight: 600;
 }

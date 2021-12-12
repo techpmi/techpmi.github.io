@@ -16,7 +16,7 @@ class Authorization extends Component<{}, IAuthorizationState> {
     }
     render() { 
         return (
-            <Page type="form" caption="Авторизация">
+            <Page type="form" caption="Авторизация" backLink=''>
                 <Card.Body className="Form-wrapper">
                     <Card.Body className="Form-header-wrapper center">
                         <h1 className="Form-header">АВТОРИЗАЦИЯ / <a className="Form-header-link" href="/#/reg">РЕГИСТРАЦИЯ</a></h1>

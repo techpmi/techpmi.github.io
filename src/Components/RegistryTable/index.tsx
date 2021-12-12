@@ -10,6 +10,7 @@ export interface Column {
 interface RegistryTableProps {
     columns: Column[];
     data: Record<string, string>[];
+    link: string;
 }
 
 interface RegistryTableState {
@@ -77,11 +78,17 @@ class RegistryTable extends Component<RegistryTableProps, RegistryTableState> {
 
         const tableData: ReactNode[] = sortedData.map((row: Record<string, string>, index: number) => {
             return (
-                <tr key={index}>
-                    {columns.map((column: Column, index: number) => {
-                        return <td key={index}>{row[column.field]}</td>;
-                    })}
-                </tr>
+                    <tr key={index}>
+                        <a href={this.props.link + `?q=URLUtils.searchParams&id=${row.id}`} style={ {display: 'contents'} }>
+                            {columns.map((column: Column, index: number) => {
+                                return (
+                                    <td key={index}>
+                                        {row[column.field]}
+                                    </td>
+                                );
+                            })}
+                        </a>
+                    </tr>
             );
         });
 

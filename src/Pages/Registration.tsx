@@ -26,7 +26,7 @@ class Registration extends Component<{}, IRegistrationState> {
     }
     render() { 
         return (
-            <Page type="form" caption="Регистрация">
+            <Page type="form" caption="Регистрация" backLink=''>
                 <Card.Body className="Form-wrapper">
                     <Card.Body className="Form-header-wrapper center">
                         <h1 className="Form-header">РЕГИСТРАЦИЯ / <a className="Form-header-link" href="/#/auth">АВТОРИЗАЦИЯ</a></h1>
