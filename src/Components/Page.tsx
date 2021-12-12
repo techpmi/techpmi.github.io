@@ -7,6 +7,7 @@ interface PageProps {
     caption: string;
     children: ReactElement;
     type: 'registry' | 'card' | 'form';
+    backLink: string;
 }
 
 class Page extends Component<PageProps> {
@@ -21,10 +22,10 @@ class Page extends Component<PageProps> {
     render() { 
         switch (this.props.type) {
             case 'registry': {
-                return (<RegistryPage caption={this.props.caption}>{this.props.children}</RegistryPage>);
+                return (<RegistryPage backLink={this.props.backLink} caption={this.props.caption}>{this.props.children}</RegistryPage>);
             }
             case 'card': {
-                return (<CardPage caption={this.props.caption}>{this.props.children}</CardPage>);
+                return (<CardPage backLink={this.props.backLink} caption={this.props.caption}>{this.props.children}</CardPage>);
             }
             case 'form': {
                 return (<FormPage caption={this.props.caption}>{this.props.children}</FormPage>);

@@ -18,7 +18,7 @@ class ForgetPassword extends Component {
     }
     render() { 
         return (
-            <Page type="form" caption="Смена пароля">
+            <Page type="form" caption="Смена пароля" backLink=''>
                 <Card.Body className="Form-wrapper">
                     <Card.Body className="Form-header-wrapper center">
                         <h1 className="Form-header">СМЕНА ПАРОЛЯ</h1>

@@ -7,6 +7,7 @@
     padding-left: 270px;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
 
 .Registry-background-decor {
@@ -32,7 +33,8 @@
     background-image: url(../../resources/decorbottom.png);
 }
 
-.Registry-header {
+.Registry-header-wrapper {
+    display: flex;
     background-color: #fffc;
     border: none;
     border-radius: 10px;
@@ -45,9 +47,17 @@
     font-weight: 300;
     font-size: 80px;
     line-height: 94px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.Registry-header-wrapper:hover .Registry-header {
+    color: black;
 }
 
 .Registry-Content {
+    pointer-events: auto;
     background: none;
     border: none;
     position: absolute;
@@ -86,4 +96,15 @@
     top: calc(50% - 20px);
     content: "";
     background-image: url(../../resources/search.png);
+}
+
+.Registry-header-back {
+    width: 50px;
+    line-height: 94px;
+    padding-right: 20px;
+    transition: .3s ease-out;
+}
+
+.Registry-header-wrapper:hover .Registry-header-back {
+    transform: translateX(-50px);
 }

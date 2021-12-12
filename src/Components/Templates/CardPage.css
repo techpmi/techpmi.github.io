@@ -6,6 +6,7 @@
     padding-top: 270px;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 }
 
 .Card-background-decor {
@@ -24,7 +25,8 @@
     background-image: url(../../resources/decortop.png);
 }
 
-.Card-header {
+.Card-header-wrapper {
+    display: flex;
     background-color: #fffc;
     border: none;
     border-radius: 10px;
@@ -37,9 +39,17 @@
     font-weight: 300;
     font-size: 80px;
     line-height: 94px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.Card-header-wrapper:hover .Card-header {
+    color: black;
 }
 
 .Card-Content {
+    pointer-events: auto;
     background: none;
     border: none;
     position: absolute;
@@ -53,4 +63,22 @@
     position: absolute;
     width: 100%;
     top: 270px;
+}
+
+.Card-header-name {
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.Card-header-back {
+    width: 50px;
+    line-height: 94px;
+    padding-right: 20px;
+    transition: .3s ease-out;
+}
+
+.Card-header-wrapper:hover .Card-header-back {
+    transform: translateX(-50px);
 }
