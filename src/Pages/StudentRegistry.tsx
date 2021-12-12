@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Page from '../Components/Page';
 import RegistryTable, { Column } from '../Components/RegistryTable';
+import { TData, getStudentsList } from '../DataUtil';
 import { studentTableColumns, students } from '../mockdata';
 
 // подумать, нужен ли нам этот интерфейс
@@ -12,6 +13,7 @@ interface StudentRegistryData {
 
 interface StudentRegistryPageState {
     pattern: string;
+    data?: TData[];
 }
 
 // TODO: Сверстать реестр студентов
@@ -25,7 +27,11 @@ class StudentRegistry extends Component<{}, StudentRegistryPageState> {
 
         this.handlePressEnter = this.handlePressEnter.bind(this);
     }
-
+    componentDidMount() {
+        getStudentsList().then((value: TData[] | undefined) => {
+            this.setState({data: value});
+        });
+    }
     handlePressEnter(event: any): void {
         if (event.key === 'Enter') {
             this.setState({
@@ -50,13 +56,19 @@ class StudentRegistry extends Component<{}, StudentRegistryPageState> {
 
     render() {
         return (
-            <Page type="registry" caption="Реестр студентов">
-                <>
-                    <div className="Registry-input-wrapper">
-                        <input type="search" className="Registry-input" placeholder="Поиск" onKeyDown={this.handlePressEnter} />
-                    </div>
-                    <RegistryTable columns={studentTableColumns} data={this.filterData(students)} />
-                </>
+            <Page type="registry" caption="Реестр студентов" backLink="/#">
+                {
+                    this.state.data
+                    ? 
+                    <>
+                        <div className="Registry-input-wrapper">
+                            <input type="search" className="Registry-input" placeholder="Поиск" onKeyDown={this.handlePressEnter} />
+                        </div>
+                        <RegistryTable columns={studentTableColumns} data={this.filterData(this.state.data)} link="/#/student-card" />
+                    </>
+                    : 
+                    <></>
+                }
             </Page>
         );
     }

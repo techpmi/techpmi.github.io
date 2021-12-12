@@ -40,42 +40,43 @@ const DEV_NAVIGATION = (
 ); 
 
 function App() {
-    return (
-        <Router>
-            <>
-                {DEV_NAVIGATION}
+  
+  return (
+    <Router>
+      <>
+        {DEV_NAVIGATION}
 
-                {/* <Switch> пробегает по дочерним элементам <Route> и рендерит
-                    первый с path совпадающим с текущим url. */}
-                <Switch>
-                    <Route path="/auth">
-                        <pages.Authorization/>
-                    </Route>
-                    <Route path="/reg">
-                        <pages.Registration/>
-                    </Route>
-                    <Route path="/forget">
-                        <pages.ForgetPassword/>
-                    </Route>
-                    <Route path="/students">
-                        <pages.StudentRegistry/>
-                    </Route>
-                    <Route path="/departments">
-                        <pages.DepartmentRegistry/>
-                    </Route>
-                    <Route path="/student-card">
-                        <pages.StudentCard/>
-                    </Route>
-                    <Route path="/department-card">
-                        <pages.DepartmentCard/>
-                    </Route>
-                    <Route path="/">
-                        <pages.Main/>
-                    </Route>
-                </Switch>
-            </>
-        </Router>
-    );
+        {/* <Switch> пробегает по дочерним элементам <Route> и рендерит
+            первый с path совпадающим с текущим url. */}
+        <Switch>
+          <Route path="/auth">
+              <pages.Authorization/>
+          </Route>
+          <Route path="/reg">
+              <pages.Registration/>
+          </Route>
+          <Route path="/forget">
+              <pages.ForgetPassword/>
+          </Route>
+          <Route path="/students">
+              <pages.StudentRegistry/>
+          </Route>
+          <Route path="/departments">
+              <pages.DepartmentRegistry/>
+          </Route>
+          <Route path="/student-card">
+              <pages.StudentCard/>
+          </Route>
+          <Route path="/department-card">
+              <pages.DepartmentCard/>
+          </Route>
+          <Route path="/">
+              <pages.Main/>
+          </Route>
+        </Switch>
+      </>
+    </Router>
+  );
 }
 
 export default App;
